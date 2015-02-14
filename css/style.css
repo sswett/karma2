@@ -1,0 +1,301 @@
+/* Paul Irish Box-Sizing: Border-Box reset - apply a natural box layout model to all elements, but allowing components to change http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+
+html {
+  box-sizing: border-box; 
+}
+
+*, *:before, *:after {
+   box-sizing: inherit; 
+}
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* Beginning of my own styles */
+
+html {
+	font-size: 62.5%;   /* So that 1 rem = 10 px */
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+div {
+    /* border: 1px solid Chocolate; */   /* This was for "debugging" */
+}
+
+.top-navigation {
+	font-size: 1.6rem;
+	color: #838994;
+	letter-spacing: .048rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	background-color: #fff;
+	position: fixed;
+	width: 100%;   /* must specify explicitly when using fixed position */
+	z-index: 9999;
+}
+
+.top-navigation > .content {
+	/* Could use a width of 60% to make it more dynamic */
+	height: 7rem;
+	/* min-width: 56rem; */
+}
+
+.content {
+	width: 97rem;  /* 970px */
+	padding: 1.5rem;
+	margin: 0 auto;
+}
+
+.logo {
+	width: 26px;
+}
+
+.top-navigation > .content > .links {
+	margin-top: 1.3rem;
+	color: #838994;
+	float: right;
+}
+
+.top-navigation > .content > .links li {
+	display: inline-block;
+	margin-left: 1.5em;
+}
+
+.top-navigation > .content > .links .active {
+	color: #4c5058;
+	font-weight: 500;
+}
+
+.top-navigation > .content > .links a {
+	color: #838994;
+	text-decoration: none;
+}
+
+.top-navigation > .content > .links a:hover {
+	color: black;
+	cursor: pointer;
+}
+
+.intro {
+	/* width: 100%; */
+	height: 66rem;
+	background-image: url(../images/first-background.jpg);
+	background-size: cover;
+	background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+h1, h2 {
+	font-weight: 300;   /* default is 400 */
+}
+
+h1 {
+	font-size: 5rem;
+}
+
+h2 {
+	font-size: 4.4rem;
+}
+
+h3 {
+	font-size: 2.5rem;
+}
+
+.intro h1, .intro h3, .buttons {
+	color: #FFF;
+	text-align: center;
+}
+
+.intro h1 {
+	margin-top: 18rem;
+}
+
+.intro h3, .intro .buttons {
+	margin-top: 2rem;
+}
+
+.big-button {
+    width: 15.5rem;
+    background-color: #f15a29;
+    border-color: #f15a29;
+    text-shadow: none;
+    border-style: none;
+    border-radius: 4px;
+    padding: 1.6rem 2.4rem;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.big-button:hover {
+    background-color: #d9400e;
+    border-color: #cf3d0e;
+    cursor: pointer;
+}
+
+.cases .content h2, .cases .content ul {
+	text-align: center;
+}
+
+.cases .content h2 {
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+}
+
+
+.cases .devices {
+    width: 33.1%;   /* 33.33333% doesn't really work due to the gap/space between inline elements; see Flexbox stuff below */
+    display: inline-block;
+    text-align: center;
+
+    /* styles to assist with debugging */
+    box-sizing: border-box;
+
+    /* Flexbox doesn't really work in conjunction with inline-block, so I'm skipping it and using 33.1%.  Actually, I prefer
+       my own li approach instead of these 33% divs, but it could depend on the background. */
+
+    /* start Flexbox stuff (to avoid gap/space between inline elements): */
+    
+    /* display: -webkit-box;  */     /* OLD - iOS 6-, Safari 3.1-6 */
+  	/* display: -moz-box;     */     /* OLD - Firefox 19- (buggy but mostly works) */
+  	/* display: -ms-flexbox;  */     /* TWEENER - IE 10 */
+  	/* display: -webkit-flex; */     /* NEW - Chrome */
+  	/* display: flex;         */    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+  	/* end Flexbox stuff */
+
+
+}
+
+
+/*
+.svg-icons {
+	list-style-type: none;
+}
+
+.svg-icons li {
+	display: inline-block;
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+.svg-icon {
+	height: 127px;
+	display: inline-block;
+	margin-top: 3.5rem;
+	margin-bottom: 3.5rem;
+}
+
+*/
+
+.svg-icon {
+	height: 127px;
+	display: inline-block;
+	margin-top: 3.5rem;
+	margin-bottom: 3.5rem;
+}
+
+
+/* Footer area */
+
+.social .content {
+	text-align: center;
+}
+
+.social hr {
+	border: 0;
+	border-top: 1px solid #eaebec;
+	margin: 2.1rem 0;
+}
+
+.social h5 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+.social-icons {
+	list-style-type: none;
+	margin: 1.5rem 0;
+}
+
+.social-icons li {
+	border-radius: 2rem;
+	font-size: 1.6rem;
+	width: 4rem;
+	height: 4rem;
+	display: inline-block;
+	margin: 1.2rem .6rem;   /* [top/bottom]  [right/left] */
+	border: 1px solid #eaebec;
+	padding: 1.2rem 0;
+}
+
+.social .twitter {
+	color: #55acee;
+}
+
+.social .facebook {
+	color: #4c66a4;
+}
+
+
+.social .instagram {
+	color: #3f729b;
+}
+
+.copyright {
+	font-size: 1.44rem;
+	font-weight: 300;
+	color: #838994;
+}
